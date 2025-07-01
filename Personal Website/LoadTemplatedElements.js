@@ -5,9 +5,10 @@ async function loadComponent(id, file) {
 }
 
 function loadCSS(href) {
-  const link = document.createElement(href);
-  link.rel = "stylesheet";
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
   link.href = href;
+  console.log('Created link element:', link);
   document.head.appendChild(link);
 }
 window.addEventListener("DOMContentLoaded", () => {
